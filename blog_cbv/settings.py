@@ -71,8 +71,8 @@ MIDDLEWARE = [
     'apps.accounts.middleware.ActiveUserMiddleware',
 ]
 
-RECAPTCHA_PUBLIC_KEY = '6LemeEYrAAAAAGSDJuuJUHo90HTou-prllTwllPr'
-RECAPTCHA_PRIVATE_KEY = '6LemeEYrAAAAAOJkYD28ek6KrF3fiD1n7Shz2LSX'
+RECAPTCHA_PUBLIC_KEY = os.getenv("RECAPTCHA_PUBLIC_KEY")
+RECAPTCHA_PRIVATE_KEY = os.getenv("RECAPTCHA_SECRET_KEY")
 
 def show_toolbar(request):
     return True
